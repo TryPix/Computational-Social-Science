@@ -1,9 +1,9 @@
 """
-Example of frame differencing using opencv. 
+Frame differencing to detect motion using opencv. 
 
 Video source: https://www.pexels.com/video/aerial-view-of-bridge-and-river-2292093/
 
-Saimaneesh Yeturu - 23/09/2023
+Saimaneesh Yeturu - 09/2023
 
 """
 
@@ -34,7 +34,7 @@ for i in range(0, round(nFrames)):
     # Lower threshold; convert each pixel to either black or white. This clearly seperates moving objects from non-moving
     thresh_frame = cv2.threshold(src=frame_diff, thresh=30, maxval=255, type=cv2.THRESH_BINARY)[1]
 
-    contours, _ = cv2.findContours(thresh_frame, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) 
+    contours, _ = cv2.findContours(thresh_frame, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE) 
 
     # Draw contours on current (color) frame
     cv2.drawContours(image=curr_frame, contours=contours, contourIdx=-1, color=(0, 255, 0), thickness=2, lineType=cv2.LINE_AA)
@@ -43,7 +43,7 @@ for i in range(0, round(nFrames)):
     cv2.imshow('Frame Differencing', curr_frame)
 
     # Or display thresh_frame!
-    #cv2.imshow('Frame Differencing', thresh_frame)
+    # cv2.imshow('Frame Differencing', thresh_frame)
 
     key = cv2.waitKey(10); # wait
     if (key == ord('q')): # to exit
