@@ -3,7 +3,7 @@ Frame differencing to detect motion using opencv.
 
 Video source: https://www.pexels.com/video/aerial-view-of-bridge-and-river-2292093/
 
-Saimaneesh Yeturu - 09/2023
+09/2023
 
 """
 
