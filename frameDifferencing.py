@@ -10,7 +10,7 @@ Saimaneesh Yeturu - 09/2023
 import cv2
 import numpy as np
 
-capture_cam = cv2.VideoCapture("car.mp4"); 
+capture_cam = cv2.VideoCapture("pexels_videos_2292093 (2160p).mp4"); 
 
 nFrames = capture_cam.get(cv2.CAP_PROP_FRAME_COUNT)
 
