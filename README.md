@@ -1,3 +1,3 @@
-# Computational-Social-Science
+# Computer Vision
 
-Simple computational social science tasks.
+A discovery of computer vision, using opencv in Python. 
